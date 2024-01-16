@@ -60,6 +60,19 @@ namespace Stocks.Infrastructure
             return services;
         }
 
+        private static IServiceCollection AddConsumer(this IServiceCollection services)
+        {
+            var config = new ConsumerConfig
+            {
+                BootstrapServers = "127.0.0.1:9092",
+                GroupId = "venta-actualizar-stocks",
+                AutoOffsetReset = AutoOffsetReset.Latest
+            };
+
+            services.AddSingleton<IConsumerFactory>(sp => new ConsumerFactory(config));
+            return services;
+        }
+
         private static void AddEventServices(this IServiceCollection services)
         {
             services.AddSingleton<IEventSender, EventSender>();

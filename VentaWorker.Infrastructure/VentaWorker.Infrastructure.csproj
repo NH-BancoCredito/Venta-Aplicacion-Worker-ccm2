@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\Base\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\VentaWorker.Domain\VentaWorker.Domain.csproj" />
   </ItemGroup>
 

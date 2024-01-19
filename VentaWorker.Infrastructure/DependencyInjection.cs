@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Stocks.Domain.Repositories;
-using Stocks.Infrastructure.Repositories;
+
 using MongoDB.Driver;
 using Confluent.Kafka;
 using Stocks.Domain.Service.Events;
@@ -42,7 +42,7 @@ namespace Stocks.Infrastructure
 
         private static void AddRepositories(this IServiceCollection services)
         {
-            services.AddScoped<IProductoRepository, ProductoRepository>();
+           //services.AddScoped<IProductoRepository, ProductoRepository>();
 
             
         }

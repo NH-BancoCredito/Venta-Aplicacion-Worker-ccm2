@@ -19,9 +19,9 @@ namespace Venta.Worker.Workers
             while (!cancellationToken.IsCancellationRequested)
             {
                 var consumeResult = consumer.Consume(cancellationToken);
-                var data = 1;
-
-                // handle consumed message.
+                //Llamar al handler para actualizar la información del producto
+                //, la actualización deberia relizarse llamando una api del
+                //microservicio de Ventas
                 
             }
 

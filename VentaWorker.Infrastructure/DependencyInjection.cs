@@ -28,6 +28,7 @@ namespace Stocks.Infrastructure
             services.AddRepositories();
             services.AddProducer();
             services.AddEventServices();
+            services.AddConsumer();
         }
 
         private static void AddDataBaseFactories(this IServiceCollection services, string connectionString)

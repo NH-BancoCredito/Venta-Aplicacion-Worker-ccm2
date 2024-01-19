@@ -1,6 +1,7 @@
 using Stocks.Api.Middleware;
 using Stocks.Application;
 using Stocks.Infrastructure;
+using Venta.Worker.Workers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,9 @@ builder.Services.AddApplication();
 //Capa de infra
 var connectionString = builder.Configuration.GetConnectionString("dbStocks-cnx");
 builder.Services.AddInfraestructure(connectionString);
+//Adiconando el background service
+builder.Services.AddHostedService<ActualizarStocksWorker>();
+
 
 
 var app = builder.Build();

@@ -19,6 +19,7 @@ namespace Venta.Worker.Workers
             while (!cancellationToken.IsCancellationRequested)
             {
                 var consumeResult = consumer.Consume(cancellationToken);
+                var data = 1;
 
                 // handle consumed message.
                 

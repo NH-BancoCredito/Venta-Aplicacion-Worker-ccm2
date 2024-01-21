@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stocks.Application.Common
+namespace VentaWorker.Application.Common
 {
     public class RequestValidationBehavior<TRequest, TResponse> :
         IPipelineBehavior<TRequest, TResponse>

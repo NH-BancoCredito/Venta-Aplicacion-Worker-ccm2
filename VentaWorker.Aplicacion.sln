@@ -16,8 +16,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VentaWorker.Infrastructure", "VentaWorker.Infrastructure\VentaWorker.Infrastructure.csproj", "{F646A21E-0532-4B87-A486-B6CB03709751}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Worker", "Worker", "{853760EA-B845-43DF-9A1C-BAFE3E4710F2}"
+	ProjectSection(SolutionItems) = preProject
+		VentaWorker.Infrastructure\DependencyInjection.cs = VentaWorker.Infrastructure\DependencyInjection.cs
+	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Venta.Worker", "Venta.Worker\Venta.Worker.csproj", "{8390C7BA-F7B5-4EBF-A4C3-1FB0FDF42E40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VentaWorker.Worker", "Venta.Worker\VentaWorker.Worker.csproj", "{8390C7BA-F7B5-4EBF-A4C3-1FB0FDF42E40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

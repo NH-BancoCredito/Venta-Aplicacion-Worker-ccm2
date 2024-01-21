@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stocks.Domain.Models
+namespace VentaWorker.Domain.Models
 {
     public class Producto
     {
@@ -15,6 +15,7 @@ namespace Stocks.Domain.Models
         public int Stock { get; set; }
         public int StockMinimo { get; set; }
         public decimal PrecioUnitario { get; set; }
+        public int IdCategoria { get; set; }
 
 
     }

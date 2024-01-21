@@ -6,16 +6,17 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using Stocks.Domain.Repositories;
+using VentaWorker.Domain.Repositories;
 
 using MongoDB.Driver;
 using Confluent.Kafka;
-using Stocks.Domain.Service.Events;
-using Stocks.Infrastructure.Services.Events;
+using VentaWorker.Domain.Service.Events;
+using VentaWorker.Infrastructure.Services.Events;
 using System.Net;
+using VentaWorker.Domain.Service.WebServices;
+using VentaWorker.Infrastructure.Services.WebServices;
 
-
-namespace Stocks.Infrastructure
+namespace VentaWorker.Infrastructure
 {
     public static class DependencyInjection
     {
@@ -23,6 +24,14 @@ namespace Stocks.Infrastructure
             this IServiceCollection services, string connectionString
             )
         {
+
+            var httpClientBuilder = services.AddHttpClient<IVentaService, VentaService>(
+                options =>
+                {
+                    options.BaseAddress = new Uri("https://localhost:7066/");
+                    options.Timeout = TimeSpan.FromMilliseconds(20000);
+                }
+                );
 
             services.AddDataBaseFactories(connectionString);
             services.AddRepositories();

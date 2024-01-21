@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stocks.Domain.Service.Events
+namespace VentaWorker.Domain.Service.Events
 {
     public interface IEventSender
     {

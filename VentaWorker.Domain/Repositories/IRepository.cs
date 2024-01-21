@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stocks.Domain.Repositories
+namespace VentaWorker.Domain.Repositories
 {
     public interface IRepository
     {

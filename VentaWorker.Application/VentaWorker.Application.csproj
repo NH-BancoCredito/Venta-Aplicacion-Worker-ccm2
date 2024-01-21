@@ -16,8 +16,4 @@
     <ProjectReference Include="..\VentaWorker.Domain\VentaWorker.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CasosUso\" />
-  </ItemGroup>
-
 </Project>

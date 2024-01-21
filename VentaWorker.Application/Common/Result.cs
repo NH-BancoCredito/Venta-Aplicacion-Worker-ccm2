@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stocks.Application.Common
+namespace VentaWorker.Application.Common
 {
     public interface IResult
     {

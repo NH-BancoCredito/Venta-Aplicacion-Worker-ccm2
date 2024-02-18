@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Venta.Application\Venta.Application.csproj" />
-    <ProjectReference Include="..\Venta.Domain\Venta.Domain.csproj" />
+    <ProjectReference Include="..\EntregasWorker.Application\VentaWorker.Application.csproj" />
+    <ProjectReference Include="..\EntregasWorker.Domain\VentaWorker.Domain.csproj" />
   </ItemGroup>
 
 </Project>

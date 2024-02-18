@@ -1,9 +1,19 @@
-using VentaWorker.Api.Middleware;
+using VentaWorker.Worker.Middleware;
 using VentaWorker.Infrastructure;
 using VentaWorker.Worker.Workers;
 using VentaWorker.Application;
+using Steeltoe.Extensions.Configuration.ConfigServer;
+using Steeltoe.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Configuration.AddConfigServer(
+    LoggerFactory.Create(builder =>
+    {
+        builder.AddConsole();
+    })
+    );
+
 
 // Add services to the container.
 
@@ -16,8 +26,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddApplication();
 
 //Capa de infra
-var connectionString = builder.Configuration.GetConnectionString("dbStocks-cnx");
-builder.Services.AddInfraestructure(connectionString);
+builder.Services.AddInfraestructure(builder.Configuration);
 //Adiconando el background service
 builder.Services.AddHostedService<ActualizarStocksWorker>();
 

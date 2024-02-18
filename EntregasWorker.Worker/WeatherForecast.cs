@@ -1,4 +1,4 @@
-namespace Stocks.Api
+namespace VentaWorker.Worker
 {
     public class WeatherForecast
     {

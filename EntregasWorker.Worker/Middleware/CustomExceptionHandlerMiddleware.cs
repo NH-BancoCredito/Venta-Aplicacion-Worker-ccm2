@@ -4,7 +4,7 @@ using Newtonsoft.Json.Serialization;
 using System.Net;
 using VentaWorker.Application.Common;
 
-namespace VentaWorker.Api.Middleware
+namespace VentaWorker.Worker.Middleware
 {
 
     public class CustomExceptionHandlerMiddleware

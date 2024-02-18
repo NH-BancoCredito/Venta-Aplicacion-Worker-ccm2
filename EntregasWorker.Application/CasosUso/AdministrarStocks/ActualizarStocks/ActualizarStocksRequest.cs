@@ -1,15 +1,17 @@
-﻿using MongoDB.Bson;
+﻿using MediatR;
+using VentaWorker.Application.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VentaWorker.Domain.Models;
+using MongoDB.Bson;
 
-namespace VentaWorker.Domain.Models
+namespace VentaWorker.Application.CasosUso.AdministrarStocks.ActualizarStocks
 {
-    public class Producto
+    public class ActualizarStocksRequest: IRequest<IResult>
     {
-        public ObjectId Id { get; set; }    
         public int IdProducto { get; set; }
         public string Nombre { get; set; }
         public int Stock { get; set; }
@@ -17,6 +19,6 @@ namespace VentaWorker.Domain.Models
         public decimal PrecioUnitario { get; set; }
         public int IdCategoria { get; set; }
 
-
     }
+
 }

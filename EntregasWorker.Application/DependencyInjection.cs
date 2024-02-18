@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using VentaWorker.Application.Common;
+using VentaWorker.Application.CasosUso.AdministrarStocks.ActualizarStocks;
 
 namespace VentaWorker.Application
 {
